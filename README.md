@@ -1,10 +1,10 @@
-# Chat with AI - Conversational Feedback Application
+# Bot AI - Conversational Feedback Application
 
 This application enables users to interact with an AI model in a chat format and provide feedback at multiple levels. Users can give feedback on individual responses, rate the entire conversation, and leave detailed comments. Saved conversations and feedback are accessible for future review, and a dedicated feedback view allows filtering by rating. This project uses Material UI for responsive styling.
 
 ## Table of Contents
 
-- Getting Started\*\*
+- Getting Started
 
   - Prerequisites
   - Installation
