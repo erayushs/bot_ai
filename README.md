@@ -1,70 +1,75 @@
-# Getting Started with Create React App
+# Chat with AI - Conversational Feedback Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This application enables users to interact with an AI model in a chat format and provide feedback at multiple levels. Users can give feedback on individual responses, rate the entire conversation, and leave detailed comments. Saved conversations and feedback are accessible for future review, and a dedicated feedback view allows filtering by rating. This project uses Material UI for responsive styling.
 
-## Available Scripts
+## Table of Contents
 
-In the project directory, you can run:
+- Getting Started\*\*
 
-### `npm start`
+  - Prerequisites
+  - Installation
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Usage
+- Technical Choices
+- Design Choices
+- Trade-offs and Future Improvements
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Getting Started
 
-### `npm test`
+### Prerequisites
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Make sure you have Node.js installed on your machine.
 
-### `npm run build`
+### Installation
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. Clone the repository:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+`git clone https://github.com/erayushs/bot_ai.git`
+`cd bot_ai`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2. Install dependencies:
 
-### `npm run eject`
+`npm install`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Starting the Application
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. Start the development server:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+`npm start`
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+2. Open http://localhost:3000 to view the application in the browser.
 
-## Learn More
+### Usage
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+1. **Start a Conversation:** Begin a new chat session by typing a question. The application simulates AI responses using a JSON file with predefined answers.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+2. **Provide Feedback:**
 
-### Code Splitting
+   - **Thumbs Up/Down:** Hover over each AI response to reveal thumbs up/down buttons. Click to provide feedback on specific responses.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+   - **Rate the Conversation:** After completing a conversation, rate the session on a 5-star or Likert scale.
 
-### Analyzing the Bundle Size
+   - **Subjective Feedback:** Enter any additional thoughts on the overall conversation quality.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+3. **View Past Conversations:** Saved conversations can be revisited from a side or top panel, displaying user feedback alongside AI responses.
 
-### Making a Progressive Web App
+4. **Feedback Overview:** A dedicated feedback view displays all feedback across conversations in a sortable and filterable table, allowing filtering by ratings.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### Technical Choices
 
-### Advanced Configuration
+**Material UI:** Used for consistent styling and theming across the application.
+**Mocked AI Responses (JSON):** Uses a JSON file to simulate AI responses, ensuring consistent and predictable interactions for development.
+**Local State Management:** Manages conversation data in local state for fast updates, with storage in localStorage to enable viewing saved chats after refresh.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### Design Choices
 
-### Deployment
+- **Hover-Triggered Feedback Buttons:** Thumbs up/down buttons appear on hover over each AI response, keeping the interface clean while enabling granular feedback.
+- **End-of-Conversation Rating and Feedback:** Rating and feedback features capture user sentiment, with a 5-star or Likert scale rating and space for additional comments.
+- **Feedback Table View:** Organizing feedback in a table supports easy filtering and sorting for better insights.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+### Trade-offs and Future Improvements
 
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- **Real-Time AI Integration:** Using a live AI API could enhance chat realism, which could be added in future iterations.
+- **Centralized State Management:** For larger projects, Redux or a similar state management library could improve state handling across components.
+- **Expanded Feedback Options:** Adding additional metrics like relevance or satisfaction would enrich insights and could be prioritized in future versions.
+- **User Accounts:** Implementing authentication would allow users to save and access feedback across sessions.
